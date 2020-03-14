@@ -3,6 +3,8 @@
  */
 
 #include <iostream>
+#include <QApplication>
+#include <QLabel>
 #include <stdlib.h>
 #include "app.h"
 
@@ -10,9 +12,12 @@ std::string SystemMonitor::Greeter::greeting() {
     return std::string("Hello, Muhammad Hassan Zahid!");
 }
 
-int main () {
+int main (int argc, char * argv[]) {
     SystemMonitor::Greeter greeter;
     std::cout << greeter.greeting() << std::endl;
+
+    QApplication app(argc, argv);
+    QLabel hello("Hello, World!");
 
     return 0;
 }

@@ -37,10 +37,13 @@ model {
                 cppCompiler.withArguments { args ->
                     args.add('-lcurl')
                     args.add('-pthread')
+                    args.add('-fPIC')
                 }
                 linker.withArguments { args ->
                     args.add('-lcurl')
-                    args.add('-pthread')                }
+                    args.add('-pthread')
+                    args.add('-fPIC')
+                }
             }
         }
     }
